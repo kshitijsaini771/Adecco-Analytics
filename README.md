@@ -94,7 +94,7 @@ This dashboard turns raw data into clear, strategic information. It not only mea
 
 This interactive Excel dashboard is designed for easy exploration. Follow these steps to gain insights:
 
-1.  **Open the File:** Launch the `HR Data_Excel.xlsx` file in Microsoft Excel.
+1.  **Open the File:** Launch the `Adecco.xlsx` file in Microsoft Excel.
 
 2.  **Navigate & Interact:**
     *   **Key Metrics:** View the summary at the top, which includes the Overall Attrition Rate and Count.
