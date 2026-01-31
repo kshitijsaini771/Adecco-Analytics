@@ -84,7 +84,7 @@ This dashboard turns raw data into clear, strategic information. It not only mea
 
 ---
 
-![Adecco](Adecco%20Dash.png)
+![Adecco](Adecco.PNG)
 
 ---
 
@@ -108,7 +108,7 @@ This interactive Excel dashboard is designed for easy exploration. Follow these 
 
 ## Author & Contact
 - Name: `Kshitij Saini`
-- Contact: `pratyushpuri17@gmail.com` / [LinkedIn](https://www.linkedin.com/in/kshitij-saini-b950b7299?utm_source=share_via&utm_content=profile&utm_medium=member_android)
+/ [LinkedIn](https://www.linkedin.com/in/kshitij-saini-b950b7299?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 
 
  
