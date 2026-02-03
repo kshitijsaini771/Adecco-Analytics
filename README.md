@@ -1,110 +1,78 @@
-# Adecco-Analytics
-<div align="center">
+# Adecco-Attrition-Analysis
 
-
-
-</div>
-
-<!--![Adecco](https://logos-world.net/wp-content/uploads/2023/08/Adecco-Logo.png)
-![Adecco](https://raw.githubusercontent.com/PratyushPuri/Adecco-Analytics/refs/heads/main/Adecco%20Dash.png)-->
-
-<br>
+---
 
 ## Overview
 
-Employee turnover at Adecco India is rising, particularly among junior sales employees. This attrition raises the cost of hiring and training new employees and affects productivity.
+Adecco India is experiencing an increase in employee turnover, especially among junior sales staff. This attrition escalates expenses related to recruitment and onboarding while also diminishing overall productivity.
 
-In order to determine the main causes of employee departures, this project examines HR data. Finding trends in departmental difficulties, demographics, and job satisfaction is the main goal. The objective is to offer practical insights to boost engagement, lower turnover, and improve retention tactics.
+This initiative analyzes HR data to identify the primary drivers behind employee exits. Its central aim is to uncover patterns linked to departmental challenges, demographic factors, and levels of job satisfaction. The project seeks to deliver actionable insights that enhance employee engagement, reduce attrition, and refine retention strategies.
 
-
-The result will be data-driven suggestions to assist management in cultivating a more stable and contented workforce, which will directly support the expansion and ongoing operations of the business.
+---
 
 ## Dataset
 
-This analysis uses a synthetic HR analytics dataset from [Kaggle: HR Analytics Case Study](https://www.kaggle.com/datasets/bhanupratapbiswas/hr-analytics-case-study). It is designed to mimic real-world employee attrition scenarios in a mid-sized organization. The dataset contains **1,470 employee records** across **35 columns**, which include demographic, job-related, and satisfaction-related variables.
+This analysis is based on a synthetic HR analytics dataset sourced from the [Kaggle HR Analytics Case Study](https://www.kaggle.com/datasets/bhanupratapbiswas/hr-analytics-case-study). The dataset emulates real-world employee attrition patterns within a mid-sized organization. It comprises **1,470 employee records** and includes **35 attributes** spanning demographic, job-related, and satisfaction-related factors.
 
-- **Source**: Publicly available Kaggle dataset that simulates employee data for attrition modeling.
-- **Time Coverage**: Cross-sectional (snapshot of employee status at a single time).
-- **Key Variables**:
-  - **Target**: `Attrition` (binary: "Yes" or "No") which indicates whether an employee left the company.
-  - **Demographics**: `Age`, `Gender`, `MaritalStatus`, `DistanceFromHome`.
-  - **Job Details**: `Department`, `JobRole`, `JobLevel`, `YearsAtCompany`, `BusinessTravel`.
-  - **Compensation**: `MonthlyIncome`, `HourlyRate`, `DailyRate`, `PercentSalaryHike`.
-  - **Satisfaction Metrics**: `JobSatisfaction`, `EnvironmentSatisfaction`, `WorkLifeBalance`, `RelationshipSatisfaction` (all on a scale from 1 to 4).
-  - **Work History**: `TotalWorkingYears`, `NumCompaniesWorked`, `YearsSinceLastPromotion`.
-- **Notes**: 
-  - `EmployeeCount` and `StandardHours` are constants (1 and 80, respectively) and were excluded from the analysis.
-  - `Over18` is consistently "Y" and therefore redundant.
-  - All data is anonymized and synthetic, meant for educational and analytical practice.
+- **Origin**: A publicly accessible Kaggle dataset created to simulate employee data for attrition modeling purposes.  
+- **Temporal Scope**: Cross-sectional—capturing a single point-in-time snapshot of employee status.  
+- **Key Features**:
+  - **Target Variable**: `Attrition` (binary: “Yes” or “No”), indicating whether an employee has left the organization.  
+  - **Demographic Information**: `Age`, `Gender`, `MaritalStatus`, and `DistanceFromHome`.  
+  - **Job Characteristics**: `Department`, `JobRole`, `JobLevel`, `YearsAtCompany`, and `BusinessTravel`.  
+  - **Compensation Data**: `MonthlyIncome`, `HourlyRate`, `DailyRate`, and `PercentSalaryHike`.  
+  - **Satisfaction Indicators**: `JobSatisfaction`, `EnvironmentSatisfaction`, `WorkLifeBalance`, and `RelationshipSatisfaction` (each rated on a 1–4 scale).  
+  - **Employment History**: `TotalWorkingYears`, `NumCompaniesWorked`, and `YearsSinceLastPromotion`.  
+- **Additional Notes**:
+  - Variables such as `EmployeeCount` (always 1) and `StandardHours` (always 80) are constant and were omitted from analysis.  
+  - The field `Over18` contains only the value “Y” and thus offers no analytical value.  
+  - All data is anonymized, synthetically generated, and intended for educational and analytical experimentation.
 
-## Analysis
 
-> Solution File for Analytics is `Adecco.xlsx`
+---
+ 
+## Analytics Outcome
 
-### **Data Analysis Process in Excel**
+I conducted an analysis of Adecco India’s HR dataset using Microsoft Excel to uncover key drivers behind employee turnover. The approach followed a structured sequence—from initial data setup to insightful visual summaries.
 
-I analyzed Adecco India's HR data using Microsoft Excel to find insights into employee attrition. The process went step-by-step from data preparation to visualization.
+#### **Data Cleaning & Data Pre-processing**
+* **Initial Review:** The raw HR dataset was imported into Excel to examine its layout, field labels, and variable formats.
+* **Consistency & Deduplication:** Duplicate records were eliminated, and categorical fields—such as department labels and attrition indicators—were standardized for uniformity.
+* **Missing Data Handling:** Gaps or irregular entries were detected using filters and logical validation, then corrected to maintain accuracy in subsequent computations.
 
-#### **Data Cleaning & Preparation**
-* **Initial Assessment:** I loaded the raw HR dataset into Excel to understand its structure, column names, and data types.
-* **Standardization & Deduplication:** I removed duplicates and ensured consistency in categorical data, such as department names and attrition status.
-* **Handling Missing Values:** I identified and addressed missing or inconsistent entries using filters and logical checks to ensure data integrity for calculations.
+#### **Exploratory Data Analysis (EDA) Using Fundamental Excel Tools**
+* **Key Findings:** Core Excel functions helped address critical business questions:
+    * **Overall Attrition Rate:** Formulas like `COUNTIF` and `COUNTA` were leveraged to compute the company-wide turnover percentage.
+    * **Department-Level Patterns:** **PivotTables** enabled side-by-side comparison of attrition across departments—including Sales, Engineering, and Marketing—highlighting Sales as a high-risk unit.
+    * **Demographic Profiling:** Functions such as **AVERAGE**, **FILTER**, and **PivotTables** revealed characteristics of employees who left, including mean age, salary levels, and gender distribution.
+    * **Performance & Tenure Metrics:** Average tenure, overtime frequency, and satisfaction ratings per role were derived using **PivotTables** and `AVERAGEIF`.
+    * **Driver Identification:** The `CORREL` function quantified relationships between attrition and variables like job satisfaction, monthly pay, and commute distance.
+    * **Visual Trend Exploration:** **Scatter plots** with **trendlines** illustrated associations—such as between Age and Job Satisfaction or Work-Life Balance and Performance Ratings.
+    * **Granular Segmentation:** **PivotTables** further dissected attrition by marital status, training participation, and stock option eligibility to expose nuanced behavioral trends.
 
-#### **Exploratory Data Analysis (EDA) Using Core Excel Functions**
-* **Insights:** I used essential functions to answer key questions:
-    * **Overall Attrition Rate:** I used `COUNTIF` and `COUNTA` to find the overall turnover rate.
-    * **Departmental Trends:** I created **PivotTables** to calculate and compare attrition rates across Engineering, Sales, Marketing, and more, identifying Sales as a critical area.
-    * **Demographic Analysis:** I applied **AVERAGE**, **FILTER**, and **PivotTables** to analyze the profiles of departing employees, including average age, income, and gender split.
-    * **Key Metrics:** I calculated average employee tenure, overtime prevalence, and satisfaction scores by role using **PivotTables** and `AVERAGEIF`.
-    * **Factor Correlation:** I used the `CORREL` function to find top attrition drivers like job satisfaction, monthly income, and distance from home.
-    * **Trend Analysis:** I created **scatter plots** with **Trendlines** to show relationships between variables like Age vs. Job Satisfaction and Work-Life Balance vs. Performance.
-    * **Segmented Analysis:** I used **PivotTables** to break down attrition by factors like marital status, training frequency, and stock option levels to uncover hidden patterns.
+---
+ 
+## Dashboard
+The analysis culminated in a comprehensive, interactive Excel Dashboard that synthesizes key findings into a single, user-friendly interface. This dashboard features a high-level summary metrics card displaying the overall attrition rate, complemented by dynamic visualizations—including bar, pie, and line charts—that depict department-wise turnover, demographic distributions, and trends in employee satisfaction. To support deeper exploration, it integrates responsive slicers that allow stakeholders to filter data by Department, Job Role, and Age Group in real time. Embedded insight callouts clearly highlight the most significant drivers of attrition and offer practical, data-backed recommendations for leadership. Designed as a centralized monitoring tool, the dashboard empowers decision-makers to understand root causes of turnover, track emerging patterns, and assess the impact of future retention strategies.
 
-#### **Dashboard Development**
-* **Visual Synthesis:** I compiled key findings into a single, interactive **Excel Dashboard**.
-* **Key Components:** The dashboard includes:
-    * A high-level **summary metrics card** showing the overall attrition rate.
-    * **Interactive charts** (bar, pie, line) that visualize department-wise attrition, demographic breakdowns, and satisfaction trends.
-    * **Dynamic slicers** for filtering data by Department, Job Role, and Age Group to enable user exploration.
-    * Clear **insight callouts** highlighting the main drivers of attrition and actionable recommendations for management.
-* **Purpose:** This dashboard acts as a centralized tool for stakeholders to monitor attrition trends, understand root causes, and track the impact of future changes.
+**⚠️ IMPORTANT: To use this dashboard, open the file `Adecco.xlsx` and navigate to the “Dashboard” sheet. All interactive elements function only within this tab.**
 
-## **Dashboard Summary: Key Insights & Findings**
+- This dashboard delivers a comprehensive view of employee attrition trends at Adecco India, powered by HR analytics.
+- Key metrics include overall attrition rate (16.12%), total departures (237), active headcount (1,233), and average tenure of leavers (5.13 years).
+- Visuals break down turnover by department, gender, age/education, overtime status, and job role satisfaction.
+- Interactive slicers allow filtering by Attrition status, Department, Age, Gender, and Education for real-time insights.
+- Designed for leadership and HR teams to identify high-risk segments and prioritize retention strategies.
+- Actionable callouts highlight critical drivers—such as low job satisfaction in Sales or high turnover among younger employees.
+- Enables data-driven decisions to reduce costs, improve engagement, and sustain workforce stability.
 
-The **Adecco Employee Attrition Analysis Dashboard** brings together the analysis into a single, useful visual tool. Built entirely in Excel, it helps management quickly understand the size and main causes of employee turnover.
+---
 
-The dashboard shows an **overall attrition rate of 16.12%**, which means **237 employees** have left. A main visual, like a bar chart for **Attrition by Department**, quickly points out high-risk areas, confirming concerns about the **Sales department**. Interactive filters let users break down the data further, uncovering trends by **Job Role, Age Group, and Tenure**.
-
-Additional charts offer important context:
-*   **Attrition by Demographics** (e.g., gender, age group) shows if turnover affects certain groups more.
-*   **Trends in Job Satisfaction & Income** for employees who left compared to those who stayed.
-*   **Correlation visuals** connect factors such as **Distance from Home** and **Years Since Last Promotion** to the chances of leaving.
-
-This dashboard turns raw data into clear, strategic information. It not only measures the problem but also shows where and why it happens, providing a solid basis for targeted HR actions and policy reviews to improve retention.
 
 ---
 
 ![Adecco](Adecco.PNG)
 
 ---
-
-<br>
-
-## **How to Use the Dashboard**
-
-This interactive Excel dashboard is designed for easy exploration. Follow these steps to gain insights:
-
-1.  **Open the File:** Launch the `Adecco.xlsx` file in Microsoft Excel.
-
-2.  **Navigate & Interact:**
-    *   **Key Metrics:** View the summary at the top, which includes the Overall Attrition Rate and Count.
-    *   **Explore with Slicers:** Use the interactive slicers, usually found on the side or top, to filter the entire dashboard. You can filter by **Department, Job Role, Age Group, or Marital Status** to see how attrition trends change for specific segments.
-    *   **Analyze Charts:** Hover over any chart element, like bars or pie slices, to see detailed tooltips with exact numbers and percentages.
-
-3.  **Refresh Data (If Applicable):**
-    *   If the dashboard is connected to a live data source, update it by going to the **Data** tab in the Excel ribbon and clicking **"Refresh All."**
-    *   **Security Note:** If asked about enabling macros or external links, select "Enable Content" only if you trust the source of this file.
-
 
 ## Author & Contact
 - Name: `Kshitij Saini`
