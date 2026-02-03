@@ -1,4 +1,4 @@
-# Adecco-Attrition-Analysis
+# Adecco-Analysis
 
 ---
 
@@ -55,7 +55,7 @@ I conducted an analysis of Adecco India’s HR dataset using Microsoft Excel to 
 ## Dashboard
 The analysis culminated in a comprehensive, interactive Excel Dashboard that synthesizes key findings into a single, user-friendly interface. This dashboard features a high-level summary metrics card displaying the overall attrition rate, complemented by dynamic visualizations—including bar, pie, and line charts—that depict department-wise turnover, demographic distributions, and trends in employee satisfaction. To support deeper exploration, it integrates responsive slicers that allow stakeholders to filter data by Department, Job Role, and Age Group in real time. Embedded insight callouts clearly highlight the most significant drivers of attrition and offer practical, data-backed recommendations for leadership. Designed as a centralized monitoring tool, the dashboard empowers decision-makers to understand root causes of turnover, track emerging patterns, and assess the impact of future retention strategies.
 
-**⚠️ IMPORTANT: To use this dashboard, open the file `Adecco.xlsx` and navigate to the “Dashboard” sheet. All interactive elements function only within this tab.**
+**⚠️ IMPORTANT: To use this dashboard, open the file `Solution.xlsx` and navigate to the “Dashboard” sheet. All interactive elements function only within this tab.**
 
 - This dashboard delivers a comprehensive view of employee attrition trends at Adecco India, powered by HR analytics.
 - Key metrics include overall attrition rate (16.12%), total departures (237), active headcount (1,233), and average tenure of leavers (5.13 years).
